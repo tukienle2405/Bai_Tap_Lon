@@ -1,13 +1,4 @@
-"""Dashboard phân tích cảm xúc phản hồi sinh viên (UIT-VSFC).
 
-Cách dùng trên Windows:
-  1) Đổi tên file này thành app.py, đặt trong D:\\BaitapHocMay.
-  2) Giữ nguyên hai file .joblib trong thư mục models/.
-  3) Chạy: python -m streamlit run app.py
-
-Các tệp kết quả thực nghiệm (nếu có) được đọc từ outputs/.
-Ứng dụng KHÔNG tự huấn luyện hoặc chỉnh tham số mô hình bằng tập Test.
-"""
 
 from pathlib import Path
 import re
@@ -478,13 +469,7 @@ with tab_about:
     st.subheader("Giới thiệu đề tài")
     st.write("**Tên đề tài:** Xây dựng hệ thống phân tích cảm xúc phản hồi sinh viên bằng Machine Learning.")
     st.markdown("""
-**Mục tiêu:** Phân loại văn bản tiếng Việt để hỗ trợ tổng hợp ý kiến sinh viên và theo dõi xu hướng phản hồi.
 
-**Dữ liệu:** UIT-VSFC gồm ba nhãn cảm xúc. Bộ dữ liệu được chia thành Train (11.426), Validation (1.583) và Test (3.166).
-
-**Kỹ thuật:** TF-IDF trích xuất đặc trưng; Linear SVM là bộ phân loại. Phiên bản tối ưu dùng Word + Character TF-IDF và tăng trọng số lớp trung lập.
-
-**Đánh giá:** Accuracy, Macro F1, Precision, Recall, Confusion Matrix và phân tích câu dự đoán sai.
 
 **Giới hạn:** Mô hình còn khó phân biệt câu trung lập, câu có phủ định phức tạp và phản hồi nằm ngoài chủ đề giáo dục; cần con người kiểm tra khi sử dụng kết quả cho quyết định quan trọng.
 """)

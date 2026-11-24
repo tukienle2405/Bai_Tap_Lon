@@ -1,0 +1,11 @@
+data/
+models/
+outputs/
+.venv/
+venv/
+__pycache__/
+.env
+.streamlit/secrets.toml
+*.joblib
+*.parquet
+ket_qua_phan_tich_cam_xuc.csv
